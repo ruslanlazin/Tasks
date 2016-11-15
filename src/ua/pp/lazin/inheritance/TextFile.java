@@ -14,7 +14,12 @@ public class TextFile extends File {
         return new String(bytes);
     }
 
-
-
-
+    @Override
+    public String toString() {
+        return
+                "TextFile{" +
+                        ", fileName='" + getFileName() + '\'' +
+                        ", fileBody='" + new String(getBody()) +
+                        '}';
+    }
 }

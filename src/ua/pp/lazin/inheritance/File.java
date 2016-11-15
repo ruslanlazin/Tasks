@@ -52,6 +52,10 @@ public class File {
         return newBody;
     }
 
+    public String getFileName() {
+        return fileName;
+    }
+
     @Override
     public boolean equals(Object obj) {
         if ((obj != null) && (obj instanceof File)) {
