@@ -1,4 +1,4 @@
-package ua.pp.lazin.inner;
+package ua.pp.lazin.inner.task1;
 
 public class Runner {
 

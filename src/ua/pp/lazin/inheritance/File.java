@@ -13,7 +13,7 @@ import java.util.Map;
  */
 public class File {
 
-    FileSystem fileSystem = FileSystem.getInstance();
+    private FileSystem fileSystem = FileSystem.getInstance();
     private String fileName;
 
     public File(String fileName) {
@@ -28,7 +28,10 @@ public class File {
         return true;
     }
 
-    public boolean renameTo(String newFileName) {
+    public boolean renameTo(String newFileName) throws IOException {
+        if (!fileSystem.containsKey(fileName)) {
+            throw new IOException("no file '" + fileName + "' present");
+        }
         byte[] body = fileSystem.remove(fileName);
         this.fileName = newFileName;
         fileSystem.put(fileName, body);
