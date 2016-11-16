@@ -15,11 +15,20 @@ public class TextFile extends File {
     }
 
     @Override
+    public boolean equals(Object obj) {
+        if ((obj != null) && (obj instanceof TextFile)) {
+            TextFile that = (TextFile) obj;
+            return this.getFileName().equals(that.getFileName());
+        }
+        return false;
+    }
+
+    @Override
     public String toString() {
         return
                 "TextFile{" +
-                        ", fileName='" + getFileName() + '\'' +
+                        " fileName='" + getFileName() + '\'' +
                         ", fileBody='" + new String(getBody()) +
-                        '}';
+                        "'}";
     }
 }

@@ -13,7 +13,7 @@ import java.util.Map;
  */
 public class File {
 
-    private Map<String, byte[]> fileSystem = new HashMap<>();
+    FileSystem fileSystem = FileSystem.getInstance();
     private String fileName;
 
     public File(String fileName) {
@@ -24,7 +24,7 @@ public class File {
         if (fileSystem.containsKey(fileName)) {
             throw new IOException("file already exist!");
         }
-        fileSystem.put(fileName, null);
+        fileSystem.put(fileName, new byte[0]);
         return true;
     }
 
@@ -59,7 +59,8 @@ public class File {
     @Override
     public boolean equals(Object obj) {
         if ((obj != null) && (obj instanceof File)) {
-            return Arrays.equals(this.getBody(), ((File) obj).getBody());
+            File that = (File) obj;
+            return this.fileName.equals(that.getFileName());
         }
         return false;
     }
@@ -67,15 +68,14 @@ public class File {
     @Override
     public String toString() {
         return "File{" +
-                ", fileName='" + fileName + '\'' +
+                " fileName='" + fileName + '\'' +
                 ", fileBody='" + Arrays.toString(getBody()) + '\'' +
                 '}';
     }
 
     @Override
     public int hashCode() {
-        int result = fileSystem.hashCode();
-        result = 31 * result + fileName.hashCode();
+        int result = fileName.hashCode();
         return result;
     }
 }
