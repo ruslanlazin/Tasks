@@ -59,6 +59,14 @@ public class File {
         return fileName;
     }
 
+    public void remove() {
+        fileSystem.remove(fileName);
+    }
+
+    public boolean isExist() {
+        return fileSystem.containsKey(fileName);
+    }
+
     @Override
     public boolean equals(Object obj) {
         if ((obj != null) && (obj instanceof File)) {
