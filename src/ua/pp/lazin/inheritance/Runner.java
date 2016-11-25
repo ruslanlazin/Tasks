@@ -20,10 +20,11 @@ public class Runner {
         file.printBody();
 
 
-        System.out.println("\n File the same, but references of different type ");
+        System.out.println("\n File the same, but has references of different type ");
         System.out.println("Is File 'text' equals TextFile 'text' ? " + file.equals(textFile));
 
+        System.out.println("\n" + file.hashCode());
+        System.out.println(textFile.hashCode());
+        System.out.println(plainFile.hashCode());
     }
-
-
 }

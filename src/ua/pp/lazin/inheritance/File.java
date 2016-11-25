@@ -2,8 +2,6 @@ package ua.pp.lazin.inheritance;
 
 import java.io.IOException;
 import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * Создать объект класса Текстовый файл, используя класс Файл. Методы: создать, переименовать,
@@ -11,6 +9,7 @@ import java.util.Map;
  *
  * @author Ruslan Lazin
  */
+
 public class File {
 
     private FileSystem fileSystem = FileSystem.getInstance();
@@ -86,7 +85,6 @@ public class File {
 
     @Override
     public int hashCode() {
-        int result = fileName.hashCode();
-        return result;
+        return fileName.hashCode();
     }
 }
