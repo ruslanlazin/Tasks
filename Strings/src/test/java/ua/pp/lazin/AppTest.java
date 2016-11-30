@@ -28,19 +28,19 @@ public class AppTest {
 
     @Test
     public void testToUpperCase() {
-        assertEquals("DAD", tester.toUpperCase("dad"));
+        assertEquals("DAD", tester.stringToUpperCase("dad"));
     }
 
 
     @Test
     public void testToLowerCase() {
-        assertEquals("mam?", tester.toLowerCase("MAM?"));
+        assertEquals("mam?", tester.stringToLowerCase("MAM?"));
     }
 
     @Test
     public void testIndexes() {
         List<Integer> result = Arrays.asList(0, 1, 2);
-        assertEquals(result, tester.getIndexesOf("c++ the best of the best", "c++"));
+        assertEquals(result, tester.getIndexesOfWord("c++ the best of the best", "c++"));
     }
 
     @Test

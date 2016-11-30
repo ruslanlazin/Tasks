@@ -12,6 +12,8 @@ public class Runner {
         leftEngine.getFullPower();
         rightEngine.getFullPower();
 
+        Airplane.AirplaneEngine.Engine spareEngine = new Airplane().new AirplaneEngine().new Engine();
+
         System.out.println("taking off");
 
     }

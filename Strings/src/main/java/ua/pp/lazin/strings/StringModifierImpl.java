@@ -43,17 +43,17 @@ public class StringModifierImpl implements IStringModifier {
     }
 
     @Override
-    public String toUpperCase(String string) {
+    public String stringToUpperCase(String string) {
         return string.toUpperCase();
     }
 
     @Override
-    public String toLowerCase(String string) {
+    public String stringToLowerCase(String string) {
         return string.toLowerCase();
     }
 
     @Override
-    public List<Integer> getIndexesOf(String givenString, String subString) {
+    public List<Integer> getIndexesOfWord(String givenString, String subString) {
         List<Integer> result = new ArrayList<>();
         Pattern pattern = Pattern.compile("\\Q" + subString + "\\E");
         Matcher matcher = pattern.matcher(givenString);

@@ -1,4 +1,4 @@
-package ua.pp.lazin.inner.task2;
+package ua.pp.lazin.inner.task2a;
 
 /**
  * @author Ruslan Lazin
@@ -11,23 +11,22 @@ package ua.pp.lazin.inner.task2;
  */
 public class Outer {
 
-    private int field = 1;
-
-//    public int getInnerField(){
-//        return new Inner.innerField;
-//    }
+    private static int staticField = 1;
+    public int getInnerField(){
+        return new Inner().innerField;
+    }
 
     public SomeInterface create() {
         return new Inner();
     }
 
-    private class Inner implements SomeInterface {
+    private static class Inner implements SomeInterface {
         int innerField = 6;
 
         @Override
         public void someMethod() {
             System.out.println("in interface impl");
-            System.out.println("NonStatic value of Outer" + field);
+            System.out.println("NonStatic value of Outer" + staticField);
         }
     }
 }

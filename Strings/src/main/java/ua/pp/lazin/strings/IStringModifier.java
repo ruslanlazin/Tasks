@@ -11,11 +11,11 @@ public interface IStringModifier {
 
     boolean equalsIgnoreCase(String one, String two);
 
-    String toUpperCase(String string);
+    String stringToUpperCase(String string);
 
-    String toLowerCase(String string);
+    String stringToLowerCase(String string);
 
-    List<Integer> getIndexesOf(String givenString, String subString);
+    List<Integer> getIndexesOfWord(String givenString, String subString);
 
     String replaceWord(String str, String pattern, String replace);
 
