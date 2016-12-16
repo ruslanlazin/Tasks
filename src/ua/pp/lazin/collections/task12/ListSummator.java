@@ -21,7 +21,7 @@ public class ListSummator {
             if (summandTwo != null) {
                 summandTwo = summandTwo.next;
             }
-            if (summandOne != null || carryFlag != 0 || summandTwo != null) {
+            if (summandOne != null || summandTwo != null|| carryFlag != 0 ) {
                 currentNode.next = new Node(carryFlag);
                 currentNode = currentNode.next;
             }
