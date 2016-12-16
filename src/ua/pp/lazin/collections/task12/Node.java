@@ -1,9 +1,16 @@
 package ua.pp.lazin.collections.task12;
 
 /**
- * Created by Ruslan on 12/2/2016.
+ * @author Ruslan Lazin
  */
-public class Node {
+class Node {
     Node next;
     int value;
+
+    Node() {
+    }
+
+    Node(int value) {
+        this.value = value;
+    }
 }
