@@ -74,7 +74,7 @@ public class StringModifierImpl implements IStringModifier {
     @Override
     public Map<String, Integer> countIdenticalWords(String str) {
         HashMap<String, Integer> result = new HashMap<>();
-        for (String word : str.split("[\\s,.;:!?-]+")) {
+        for (String word : str.split("[\\s,.;:!?()*=@#$%&/<>~^{|}_+-]+")) {
             word = word.toLowerCase();
             if (result.putIfAbsent(word, 1) != null) {
                 result.put(word, result.get(word) + 1);
