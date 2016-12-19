@@ -17,7 +17,7 @@ public class AppTest {
 
     @Test
     public void testLength() {
-        assertTrue(tester.countLetters("Мат і матіка надійслали Ґудзик Едіку. Welcome!") == 38);
+        assertTrue(tester.countLetters("Мат і Матіка надійслали Ґудзик Едіку. Welcome!") == 38);
     }
 
     @Test

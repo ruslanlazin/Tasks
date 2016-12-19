@@ -29,7 +29,7 @@ public class StringModifierImpl implements IStringModifier {
     @Override
     public int countLetters(String string) {
         int count = 0;
-        Pattern pattern = Pattern.compile("[a-zA-Zа-яА-ЯіїйєґІЇЙЄҐ]");
+        Pattern pattern = Pattern.compile("[\\p{L}]");
         Matcher matcher = pattern.matcher(string);
         while (matcher.find()) {
             count++;

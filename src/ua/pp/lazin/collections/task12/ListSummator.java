@@ -15,6 +15,7 @@ public class ListSummator {
             int summandTwoValue = summandTwo != null ? summandTwo.value : 0;
             currentNode.value = (summandOneValue + summandTwoValue + carryFlag) % 10;
             carryFlag = (summandOneValue + summandTwoValue + carryFlag) / 10;
+
             if (summandOne != null) {
                 summandOne = summandOne.next;
             }
